@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background: rgb(26,7,48);
+    background: radial-gradient(circle, #1a0730 62%, rgba(0,0,0,1) 100%);
+    font-family: "K2D", sans-serif;
+    color: white;
+}
+
+main{
+    margin: 0% 5%;
+}
+
+header{
+    width: 100%;
+    padding: 1% 5%;
+    display: flex;
+    align-items: center;
+}
+
+header h1{
+    color: white;
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+header img{
+    height: 45px;
+}
+
+.homeServices{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.homeServicesOptions{
+    background-color: black;
+    margin-top: 20px;
+}
+
+.servicesOption:hover{
+    background-color: #0c0514;
+}
+
+.homeServicesDescription{
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.homeServicesDescription.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.homeServices .selected{
+    background-color: #7429cb;
+}
+
+.homeServices h3{
+    color: white;
+    font-weight: 200;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.homeServices img{
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.homeServices h2{
+    font-weight: 300;
+}
+
+.homeServices button{
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 0px
+}
+
+@media (min-width: 768px){
+.homeServices h3{
+    width: 33.3%;
+}
+
+.homeServicesOptions{
+    display: flex;
+}
+}
+
+@media (min-width: 1020px){
+    .homeServices img{
+        max-width: 50%;
+        max-height: 400px;
+    }
+
+    .homeServicesDescription{
+        flex-direction: row;
+    }
+
+    .servicesText{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .servicesText h2{
+        font-size: 2em;
+    }
+}
