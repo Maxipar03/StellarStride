@@ -1,58 +1,120 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html{
+html {
     height: 100%;
     width: 100%;
 }
 
-body{
-    background: rgb(26,7,48);
-    background: radial-gradient(circle, #1a0730 62%, rgba(0,0,0,1) 100%);
+body {
+    background: rgb(26, 7, 48);
+    background: radial-gradient(circle, #1a0730 62%, rgba(0, 0, 0, 1) 100%);
     font-family: "K2D", sans-serif;
     color: white;
 }
 
-main{
+main {
     margin: 0% 5%;
 }
 
-header{
+header {
     width: 100%;
     padding: 1% 5%;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-header h1{
+.stellarLogo h1{
+    display: none;
+}
+
+header i {
+    font-size: 1.8em;
+}
+
+header h1 {
     color: white;
     font-size: 2em;
     margin-left: 10px;
 }
 
-header img{
+header img {
     height: 45px;
 }
 
-.homeServices{
+header nav{
+    display: none;
+}
+
+.descriptionBanner{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionBanner button{
+    height: 55px;
+    position: relative;
+    font-family: "K2D", sans-serif;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.2em;
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+    transition: box-shadow 0.4s ease, background-color 0.4s ease;
+    background-color: #7529cb;
+    border: 0px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.descriptionBanner h2{
+    font-weight: 100;
+}
+
+.bannerDescriptionStrong{  
+    padding: 10px;
+    background-color: #7429cb;
+}
+
+.bannerImageContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.bannerImageContainer img{
+    width: 60%;
+    display: flex;
+}
+
+.homeServices {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.homeServicesOptions{
+.homeServicesOptions {
     background-color: black;
     margin-top: 20px;
 }
 
-.servicesOption:hover{
+.servicesOption {
+    cursor: pointer
+}
+
+.servicesOption:hover {
     background-color: #0c0514;
 }
 
-.homeServicesDescription{
+.homeServicesDescription {
     display: flex;
     flex-direction: column;
     transition: opacity 0.5s ease-in-out;
@@ -64,11 +126,12 @@ header img{
     pointer-events: none;
 }
 
-.homeServices .selected{
+.homeServices .selected {
     background-color: #7429cb;
+    font-weight: 800;
 }
 
-.homeServices h3{
+.homeServices h3 {
     color: white;
     font-weight: 200;
     font-size: 1.3rem;
@@ -76,45 +139,118 @@ header img{
     padding: 10px 0px;
 }
 
-.homeServices img{
+.homeServices img {
     max-height: 400px;
     object-fit: cover;
 }
 
-.homeServices h2{
-    font-weight: 300;
+.homeServices h2 {
+    font-weight: 100;
 }
 
-.homeServices button{
+.homeServices button {
     height: 40px;
     width: 100%;
     margin-top: 20px;
     font-size: 1.2em;
-    border-radius: 5px;
-    border: 0px
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+    transition: box-shadow 0.4s ease, background-color 0.4s ease;
+    background-color: #7429cb;
+    border: 0px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
 }
 
-@media (min-width: 768px){
-.homeServices h3{
-    width: 33.3%;
+.homeServices button:hover{
+    box-shadow: 0 0 15px 5px rgba(116, 41, 203, 0.7);
+    background-color: #883dda;
 }
 
-.homeServicesOptions{
-    display: flex;
-}
-}
-
-@media (min-width: 1020px){
-    .homeServices img{
-        max-width: 50%;
-        max-height: 400px;
+@media (min-width: 768px) {
+    .stellarLogo h1{
+        display: block;
     }
 
-    .homeServicesDescription{
+    .stellarLogo{
+        display: flex;
+    }
+
+    .homeBanner{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .descriptionBanner{
+        width: 60%;
+    }
+
+    .bannerImageContainer {
+        width: 40%;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bannerImageContainer img{
+        width: 100%;
+    }
+
+    .homeServices h3 {
+        width: 33.3%;
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+
+    .homeServicesOptions {
+        display: flex;
+    }
+
+    header nav {
+        width: 45%;
+        display: block;
+    }
+    
+    header nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+}
+
+@media (min-width: 1020px) {
+    header nav {
+        width: 35%;
+        display: block;
+    }
+
+    .descriptionBanner h1{
+        font-size: 3rem;
+    }
+
+    .homeServices img {
+        max-height: none;
+        object-fit: cover;
+        width: 50%;
+        height: auto;
+    }
+
+    .homeServices button {
+        height: 50px;
+        font-family: "K2D", sans-serif;
+    }
+
+    .homeServicesDescription {
         flex-direction: row;
+        gap: 40px;
     }
 
-    .servicesText{
+    .servicesText {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -122,8 +258,25 @@ header img{
 
 }
 
-@media (min-width: 1400px) {
-    .servicesText h2{
-        font-size: 2em;
+@media (min-width: 1500px) {
+
+    header {
+        padding: 1% 10%;
+    }
+
+    main {
+        margin: 0% 10%;
+    }
+
+    .homeServices img {
+        max-height: none;
+        object-fit: cover;
+        width: 40%;
+        height: auto;
+    }
+
+    .homeServices h2 {
+        font-weight: 100;
+        font-size: 2rem;
     }
 }

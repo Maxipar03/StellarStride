@@ -8,7 +8,7 @@ const services = {
         description: "Our marketing services are designed to help your business stand out in a competitive marketplace. From digital marketing strategies like SEO, social media management, and paid advertising, to content creation and branding, we provide comprehensive solutions to reach your target audience effectively and boost your online presence. Our team tailors campaigns to align with your business goals, ensuring maximum engagement and conversion.",
     },
     growthPartner: {
-        img: './public/some-other-image.jpg',
+        img: './public/Growthpartner.jpeg',
         description: "As a Growth Partner, we combine our marketing expertise and web development capabilities to offer an integrated approach to scaling your business. By aligning your marketing strategies with a robust digital infrastructure, we provide a comprehensive roadmap for growth. Our holistic approach focuses on driving traffic, improving user experience, increasing customer engagement, and ultimately, boosting revenue. Whether you're looking to expand your online presence or optimize your current digital assets, we partner with you to achieve sustainable growth.",
     }
 };
