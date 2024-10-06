@@ -22,14 +22,21 @@ main {
 
 header {
     width: 100%;
-    padding: 1% 5%;
+    padding: 2.5% 5%;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background: rgba(5, 5, 5, 0);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.stellarLogo h1{
+.stellarLogo h1 {
     display: none;
 }
 
@@ -47,143 +54,245 @@ header img {
     height: 45px;
 }
 
-header nav{
+header nav {
     display: none;
 }
 
-.descriptionBanner{
-    gap: 30px;
+/*  HERO BANNER  */
+
+.heroSectionContainer {
+    min-height: 92vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly
 }
 
-.descriptionBanner button{
+
+.descriptionBanner {
+    margin-top: 20px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.button {
     height: 55px;
     position: relative;
     font-family: "K2D", sans-serif;
-    width: 100%;
     margin-top: 20px;
     font-size: 1.2em;
-    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
     transition: box-shadow 0.4s ease, background-color 0.4s ease;
     background-color: #7529cb;
+    box-shadow: -1px -1px 38px 0px rgba(0, 0, 0, 0.678);
     border: 0px;
     color: white;
+    border-radius: 5px;
     font-weight: 900;
     cursor: pointer;
-    z-index: 1; 
+    z-index: 1;
 }
 
-.descriptionBanner h2{
+.button.banner {
+    width: 90%;
+}
+
+.button.service {
+    width: 100%;
+}
+
+.button:hover {
+    box-shadow: -1px -1px 38px 0px rgba(117, 41, 203, 1);
+}
+
+.descriptionBanner h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.descriptionBanner h2 {
     font-weight: 100;
+    font-size: 1.5em;
 }
 
-.bannerDescriptionStrong{  
+.bannerDescriptionStrong {
     padding: 10px;
+    display: block;
+    width: auto;
     background-color: #7429cb;
 }
 
-.bannerImageContainer{
+.bannerImageContainer {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 30px;
 }
 
-.bannerImageContainer img{
+.bannerImageContainer img {
     width: 60%;
+    filter: drop-shadow(11px 5px 10px #7529cb);
     display: flex;
 }
 
-.homeServices {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.bannerReferenceContainer {
+    margin-top: 40px;
+    width: 100%;
 }
 
-.homeServicesOptions {
-    background-color: black;
-    margin-top: 20px;
-}
-
-.servicesOption {
-    cursor: pointer
-}
-
-.servicesOption:hover {
-    background-color: #0c0514;
-}
-
-.homeServicesDescription {
+.bannerReference {
+    gap: 30px;
     display: flex;
     flex-direction: column;
-    transition: opacity 0.5s ease-in-out;
-    gap: 20px;
 }
 
-.homeServicesDescription.hidden {
-    opacity: 0;
-    pointer-events: none;
+.bannerReferenceText {
+    border-bottom: 4px solid;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    margin-bottom: 23px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
-.homeServices .selected {
-    background-color: #7429cb;
-    font-weight: 800;
+.bannerBrand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
 }
 
-.homeServices h3 {
-    color: white;
-    font-weight: 200;
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 10px 0px;
+.bannerBrand img {
+    width: 60px;
+    height: 60px;
+    object-fit: scale-down;
 }
 
-.homeServices img {
-    max-height: 400px;
-    object-fit: cover;
-}
-
-.homeServices h2 {
+.bannerBrand h1 {
+    font-size: 2.5rem;
     font-weight: 100;
 }
 
-.homeServices button {
-    height: 40px;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 1.2em;
-    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
-    transition: box-shadow 0.4s ease, background-color 0.4s ease;
-    background-color: #7429cb;
-    border: 0px;
-    color: white;
-    font-weight: 900;
-    cursor: pointer;
+/* SERVISE SECTION  */
+
+.titleSection {
+    font-size: 3em;
+    margin: 50px 0px 20px 0px;
 }
 
-.homeServices button:hover{
-    box-shadow: 0 0 15px 5px rgba(116, 41, 203, 0.7);
-    background-color: #883dda;
+.plansCard {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin: 30px 0px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.52);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 16px;
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.plansCard:nth-child(1):hover{
+    background: linear-gradient(45deg, #000000ec, #164c53e0), url("./assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg");
+    background-size: cover;
+}
+
+.plansCard:nth-child(2):hover{
+    background: linear-gradient(45deg, #000000ec, #174e57e1), url("./assets/photo-1699895143289-958fa10a57c9.jpeg");
+    background-size: cover;
+}
+
+.plansCard:nth-child(3):hover{
+    background: linear-gradient(45deg, #000000ec, #217883e0), url("./assets/carlos-muza-hpjSkU2UYSU-unsplash.jpg");
+    background-size: cover; 
+}
+
+.button.plans{
+    width: 90%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.plansCard:hover .button.plans{
+    visibility: visible;
+    opacity: 1;
+}
+
+.iconServiceContainer{
+    width: 90px;
+    background-color: #000000;
+    height: 90px;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.plansCard i {
+    font-size: 3em;
+}
+
+.plansCard h2 {
+    font-size: 2em;
+}
+
+.plansCard h3 {
+    font-size: 1.5em;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
-    .stellarLogo h1{
+
+    .stellarLogo h1 {
         display: block;
     }
 
-    .stellarLogo{
+    .stellarLogo {
         display: flex;
     }
 
-    .homeBanner{
+    .homeBanner {
         display: flex;
         align-items: center;
         gap: 35px;
+        justify-content: center;
+        min-height: 91vh;
+        flex-direction: column;
     }
 
-    .descriptionBanner{
+    .heroSectionContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-height: 0px;
+    }
+
+    .bannerReference {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .descriptionBanner {
         width: 60%;
+        text-align: start;
+        align-items: start;
+    }
+
+    .bannerDescriptionStrong {
+        display: inline;
     }
 
     .bannerImageContainer {
@@ -193,12 +302,20 @@ header nav{
         justify-content: center;
     }
 
-    .bannerImageContainer img{
-        width: 100%;
+    .button.banner {
+        width: 400px;
+    }
+
+    .bannerImageContainer img {
+        width: 80%;
     }
 
     .homeServices h3 {
         width: 33.3%;
+    }
+
+    .bannerBrand h1 {
+        font-size: 1.8rem;
     }
 
     .burgerMenu {
@@ -213,7 +330,7 @@ header nav{
         width: 45%;
         display: block;
     }
-    
+
     header nav ul {
         display: flex;
         list-style: none;
@@ -229,7 +346,7 @@ header nav{
         display: block;
     }
 
-    .descriptionBanner h1{
+    .descriptionBanner h1 {
         font-size: 3rem;
     }
 
@@ -240,10 +357,10 @@ header nav{
         height: auto;
     }
 
-    .homeServices button {
-        height: 50px;
-        font-family: "K2D", sans-serif;
+    .bannerBrand h1 {
+        font-size: 2.7rem;
     }
+
 
     .homeServicesDescription {
         flex-direction: row;
@@ -254,6 +371,15 @@ header nav{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .homePlans{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .plansCard{
+        width: 32%;
     }
 
 }
