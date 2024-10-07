@@ -58,7 +58,8 @@ nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Ajustar en función de tu header */
+    top: 60px;
+    /* Ajustar en función de tu header */
     right: 0;
     background-color: #1a202c;
     width: 100%;
@@ -185,7 +186,7 @@ nav.active {
 
 .titleSection {
     font-size: 3em;
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 40px 0px;
 }
 
 .serviceCard {
@@ -273,19 +274,32 @@ nav.active {
     background-color: black;
     border-radius: 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 .optionPlans.selected {
     border: 1px solid white;
+    background-color: #1a202c;
 }
 
 .cardPlan {
-    display: flex;
+    opacity: 0;
+    transform: translateY(-50px);
+    /* Ajusta la altura inicial para simular la caída */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
     flex-direction: column;
+}
+
+.cardPlan.active {
+    opacity: 1;
     gap: 20px;
+    transform: translateY(0);
     background-color: black;
     padding: 20px;
     margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .cardPlanTitle h4 {
@@ -305,6 +319,55 @@ nav.active {
 
 .button.plan {
     margin-top: 0px;
+}
+
+.buttonPlanContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contact */
+.contactImageContainer {
+    display: none;
+}
+
+.contactContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.contactContainer input {
+    height: 50px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.116);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-family: "K2D", sans-serif;
+    font-size: 1.1em;
+}
+
+.contactContainer input::placeholder {
+    color: white;
+    font-family: "K2D", sans-serif;
+}
+
+.contactContainer textarea {
+    height: 150px;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: rgba(128, 128, 128, 0.116);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-family: "K2D", sans-serif;
+}
+
+.contactContainer textarea::placeholder {
+    color: white;
+    font-family: "K2D", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -409,28 +472,65 @@ nav.active {
 
     .serviceCard {
         width: 32%;
+        margin: 0px;
     }
 
-    .optionPlans{
+    .optionPlans {
         width: 32%;
     }
 
-    .optionPlansContainer{
+    .optionPlansContainer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .cardPlansContainer{
+    .cardPlansContainer {
         display: flex;
         justify-content: space-between;
     }
 
-    .cardPlan{
+    .cardPlan {
         width: 32%;
     }
 
+    .contactImageContainer {
+        display: flex;
+        width: 40%;
+    }
+
+    .contactContainer {
+        width: 70%;
+    }
+
+    .contactImageContainer img {
+        filter: drop-shadow(0px 0px 12px #000000);
+        animation: space 2s ease-in-out infinite;
+    }
+
+    @keyframes space {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .homeContact{
+        display: flex;
+        padding: 40px;
+        background-image: url(./assets/dark-starry-sky-stars-4k-.jpg);
+        background-size: cover;
+        border-radius: 10px;
+    }
 }
+
 
 @media (min-width: 1500px) {
 

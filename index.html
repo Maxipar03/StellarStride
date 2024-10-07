@@ -102,52 +102,120 @@
         <h1 class="titleSection">Plans</h1>
         <div class="homePlans">
             <div class="optionPlansContainer">
-                <div class="optionPlans selected">
+                <div class="optionPlans selected" data-plan="development">
                     <h2>Web development</h2>
                 </div>
-                <div class="optionPlans">
+                <div class="optionPlans" data-plan="marketing">
                     <h2>Marketing</h2>
                 </div>
-                <div class="optionPlans">
+                <div class="optionPlans" data-plan="growth">
                     <h2>Growth Partner</h2>
                 </div>
             </div>
             <div class="cardPlansContainer">
-                <div class="cardPlan">
+                <!-- Development Plan Cards -->
+                <div class="cardPlan active" data-plan="development">
                     <div class="cardPlanTitle">
                         <h2>Landing Page</h2>
-                        <h4>For Small Business</h4>
+                        <h4>Launch Your Brand with a Custom, Mobile-Ready Website.</h4>
                     </div>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at, reiciendis quos dolore numquam
-                        qui molestiae? Dolore, numquam asperiores deserunt consequuntur est fuga eaque explicabo, error,
-                        optio inventore fugit delectus?</h3>
+                    <h3>Elevate your business with a tailored UX/UI design and a secure, mobile-responsive website. This plan includes up to four static pages—such as Home, About Us, Contact, and Products—along with engaging animations, basic SEO, and SSL security. We take care of domain deployment and hosting setup, ensuring your product or service information is displayed seamlessly on a website that's ready to go live</h3>
+                    <div class="buttonPlanContainer">
                     <button class="button plan">Schedule a meet</button>
                     <button class="button plan">Request a quote</button>
+                    </div>
                 </div>
-                <div class="cardPlan">
+                <div class="cardPlan" data-plan="development">
                     <div class="cardPlanTitle">
                         <h2>Web Site</h2>
-                        <h4>For Medium Business</h4>
+                        <h4>Boost Sales with Advanced Features and Custom Integrations</h4>
                     </div>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at, reiciendis quos dolore numquam
-                        qui molestiae? Dolore, numquam asperiores deserunt consequuntur est fuga eaque explicabo, error,
-                        optio inventore fugit delectus?</h3>
-                    <button class="button plan">Schedule a meet</button>
-                    <button class="button plan">Request a quote</button>
+                    <h3>Upgrade your website with advanced user and product management, enhanced shopping cart features, and a blog section. This plan integrates custom APIs, advanced SEO tools, and email marketing. You can also apply discount codes and coupons, manage product ratings, and enjoy hosting with SSL included. Animations and additional pages are available as add-ons, ensuring your site is fully optimized and ready to boost your business.</h3>
+                    <div class="buttonPlanContainer">
+                        <button class="button plan">Schedule a meet</button>
+                        <button class="button plan">Request a quote</button>
+                    </div>
                 </div>
-                <div class="cardPlan">
+                <div class="cardPlan" data-plan="development">
                     <div class="cardPlanTitle">
                         <h2>E-Commerce</h2>
-                        <h4>For Big Business</h4>
+                        <h4>Drive Growth with a Fully Custom E-commerce Solution</h4>
                     </div>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at, reiciendis quos dolore numquam
-                        qui molestiae? Dolore, numquam asperiores deserunt consequuntur est fuga eaque explicabo, error,
-                        optio inventore fugit delectus?</h3>
+                    <h3>Get a fully custom-designed website with advanced user features, product recommendations, and a powerful cart system with abandoned cart recovery, multi-currency support, and flexible payment methods. Real-time shipping and tax calculations, analytics integration, CRM and ERP system support, and performance optimization are all included. With added security, membership models, and email marketing, this plan ensures your site is fully equipped for growth.</h3>
+                    <div class="buttonPlanContainer">
                     <button class="button plan">Schedule a meet</button>
                     <button class="button plan">Request a quote</button>
+                    </div>
+                </div>
+                <!-- Marketing Plan Cards -->
+                <div class="cardPlan" data-plan="marketing">
+                    <div class="cardPlanTitle">
+                        <h2>Basic</h2>
+                        <h4>Kickstart Your Online Presence</h4>
+                    </div>
+                    <h3>Elevate your brand with our Basic Plan, designed for those starting their digital journey. Enjoy managing up to three social media platforms with three posts each week, community engagement, and five custom graphics monthly. Our on-page SEO for four pages enhances your visibility, while two monthly email campaigns ensure you stay connected with your audience. Basic performance reports provide insights into your progress, making this plan an ideal choice for businesses looking to grow their online footprint</h3>
+                    <div class="buttonPlanContainer">
+                    <button class="button plan">Schedule a meet</button>
+                    <button class="button plan">Request a quote</button>
+                    </div>
+                </div>
+                <div class="cardPlan" data-plan="marketing">
+                    <div class="cardPlanTitle">
+                        <h2>Web Store</h2>
+                        <h4>Enhance Your Brand with Strategic Growth</h4>
+                    </div>
+                    <h3>Take your online presence to the next level with our Web Store Plan. Manage up to five social media platforms and post five times a week while receiving ten custom graphics each month. Benefit from SEO for up to ten pages and a small-scale PPC campaign with a $1,000 monthly ad spend. We’ll optimize your Google My Business profile and conduct monthly analytics meetings to refine your strategy. This plan is perfect for businesses aiming to build a stronger digital brand and increase customer engagement.</h3>
+                    <div class="buttonPlanContainer">
+                    <button class="button plan">Schedule a meet</button>
+                    <button class="button plan">Request a quote</button>
+                    </div>
+                </div>
+                <div class="cardPlan" data-plan="marketing">
+                    <div class="cardPlanTitle">
+                        <h2>E-commerce</h2>
+                        <h4>Drive Sales with Comprehensive Solutions</h4>
+                    </div>
+                    <h3>                    <h3>Maximize your sales potential with our E-commerce Plan, tailored for serious online retailers. Manage unlimited social media platforms with seven posts weekly and receive 15 custom graphics per month. Enjoy a comprehensive SEO strategy for up to 20 pages and automated email campaigns. Our PPC management supports a $3,000 monthly ad spend, and we provide two custom blog posts monthly to enhance your traffic. With in-depth reporting and influencer collaborations, this plan equips your business for sustainable growth and visibility.</h3>
+                    </h3>
+                    <div class="buttonPlanContainer">
+                    <button class="button plan">Schedule a meet</button>
+                    <button class="button plan">Request a quote</button>
+                    </div>
+                </div>
+                <!-- Growth Partner Plan Cards -->
+                <div class="cardPlan" data-plan="growth">
+                    <div class="cardPlanTitle">
+                        <h2>Growth Strategy</h2>
+                        <h4>For Large Business</h4>
+                    </div>
+                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique debitis, sequi delectus eos voluptatem, aliquid optio exercitationem molestias deleniti animi beatae repellendus consequuntur ducimus tempora praesentium atque? Optio, facilis consequatur?</h3>
+                    <div class="buttonPlanContainer">
+                    <button class="button plan">Schedule a meet <i class="fa-solid fa-video"></i></button>
+                    <button class="button plan">Request a quote <i class="fa-solid fa-envelope"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
+        <h1 class="titleSection">Contact Us</h1>
+        <div class="homeContact">
+                <div class="contactImageContainer">
+                    <img class="contactImage" src="./assets/astro.png" alt="">
+                </div>
+                <div class="contactContainer">
+                    <input type="text" placeholder="Company">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Plans">
+                    <textarea type="text" placeholder="Description"></textarea>
+                    <button class="button form">Send Form</button>
+            </div>
+        </div>
+        <footer>
+            <h1>StellarStride</h1>
+            <h3>From The Earth to the stars we take you far</h3>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+        </footer>
     </main>
     <script src="./main.js"></script>
 </body>
