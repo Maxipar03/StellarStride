@@ -27,9 +27,9 @@ header {
     top: 0px;
     z-index: 5;
     background: rgba(5, 5, 5, 0);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -54,8 +54,19 @@ header img {
     height: 45px;
 }
 
-header nav {
+nav {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajustar en función de tu header */
+    right: 0;
+    background-color: #1a202c;
+    width: 100%;
+    text-align: center;
+}
+
+nav.active {
+    display: flex;
 }
 
 /*  HERO BANNER  */
@@ -96,10 +107,6 @@ header nav {
 
 .button.banner {
     width: 90%;
-}
-
-.button.service {
-    width: 100%;
 }
 
 .button:hover {
@@ -181,7 +188,7 @@ header nav {
     margin: 50px 0px 20px 0px;
 }
 
-.plansCard {
+.serviceCard {
     display: flex;
     gap: 15px;
     flex-direction: column;
@@ -200,34 +207,34 @@ header nav {
     justify-content: space-between;
 }
 
-.plansCard:nth-child(1):hover{
+.serviceCard:nth-child(1):hover {
     background: linear-gradient(45deg, #000000ec, #164c53e0), url("./assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg");
     background-size: cover;
 }
 
-.plansCard:nth-child(2):hover{
+.serviceCard:nth-child(2):hover {
     background: linear-gradient(45deg, #000000ec, #174e57e1), url("./assets/photo-1699895143289-958fa10a57c9.jpeg");
     background-size: cover;
 }
 
-.plansCard:nth-child(3):hover{
+.serviceCard:nth-child(3):hover {
     background: linear-gradient(45deg, #000000ec, #217883e0), url("./assets/carlos-muza-hpjSkU2UYSU-unsplash.jpg");
-    background-size: cover; 
+    background-size: cover;
 }
 
-.button.plans{
+.button.service {
     width: 90%;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
 }
 
-.plansCard:hover .button.plans{
+.serviceCard:hover .button.service {
     visibility: visible;
     opacity: 1;
 }
 
-.iconServiceContainer{
+.iconServiceContainer {
     width: 90px;
     background-color: #000000;
     height: 90px;
@@ -238,19 +245,66 @@ header nav {
     justify-content: center;
 }
 
-.plansCard i {
+.serviceCard i {
     font-size: 3em;
 }
 
-.plansCard h2 {
+.serviceCard h2 {
     font-size: 2em;
 }
 
-.plansCard h3 {
+.serviceCard h3 {
     font-size: 1.5em;
     font-weight: 100;
     letter-spacing: 1px;
     text-align: center;
+}
+
+/* Plans Section */
+
+.optionPlansContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.optionPlans {
+    padding: 15px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.optionPlans.selected {
+    border: 1px solid white;
+}
+
+.cardPlan {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.cardPlanTitle h4 {
+    margin-top: 5px;
+    font-size: 1.3em;
+    color: rgb(211, 211, 211);
+}
+
+.cardPlan h2 {
+    font-size: 2em;
+}
+
+.cardPlan h3 {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.button.plan {
+    margin-top: 0px;
 }
 
 @media (min-width: 768px) {
@@ -310,10 +364,6 @@ header nav {
         width: 80%;
     }
 
-    .homeServices h3 {
-        width: 33.3%;
-    }
-
     .bannerBrand h1 {
         font-size: 1.8rem;
     }
@@ -322,13 +372,12 @@ header nav {
         display: none;
     }
 
-    .homeServicesOptions {
-        display: flex;
-    }
-
     header nav {
         width: 45%;
         display: block;
+        position: relative;
+        top: 0px;
+        background-color: rgba(255, 255, 255, 0);
     }
 
     header nav ul {
@@ -343,42 +392,41 @@ header nav {
 @media (min-width: 1020px) {
     header nav {
         width: 35%;
-        display: block;
     }
 
     .descriptionBanner h1 {
         font-size: 3rem;
     }
 
-    .homeServices img {
-        max-height: none;
-        object-fit: cover;
-        width: 50%;
-        height: auto;
-    }
-
     .bannerBrand h1 {
         font-size: 2.7rem;
     }
 
+    .homeService {
+        display: flex;
+        justify-content: space-between;
+    }
 
-    .homeServicesDescription {
+    .serviceCard {
+        width: 32%;
+    }
+
+    .optionPlans{
+        width: 32%;
+    }
+
+    .optionPlansContainer{
+        display: flex;
         flex-direction: row;
-        gap: 40px;
-    }
-
-    .servicesText {
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
     }
 
-    .homePlans{
+    .cardPlansContainer{
         display: flex;
         justify-content: space-between;
     }
 
-    .plansCard{
+    .cardPlan{
         width: 32%;
     }
 
@@ -392,17 +440,5 @@ header nav {
 
     main {
         margin: 0% 10%;
-    }
-
-    .homeServices img {
-        max-height: none;
-        object-fit: cover;
-        width: 40%;
-        height: auto;
-    }
-
-    .homeServices h2 {
-        font-weight: 100;
-        font-size: 2rem;
     }
 }
