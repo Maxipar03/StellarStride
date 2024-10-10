@@ -1,0 +1,599 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(26, 7, 48);
+  background: radial-gradient(circle, #1a0730 62%, rgba(0, 0, 0, 1) 100%);
+  font-family: "K2D", sans-serif;
+  color: white;
+}
+
+main {
+  margin: 0% 5%;
+}
+
+header {
+  width: 100%;
+  padding: 2.5% 5%;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+  background: rgba(5, 5, 5, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stellarLogo h1 {
+  display: none;
+}
+
+header i {
+  font-size: 1.8em;
+}
+
+header h1 {
+  color: white;
+  font-size: 2em;
+  margin-left: 10px;
+}
+
+header img {
+  height: 45px;
+}
+
+section{
+  scroll-margin-top: 170px;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1a202c;
+  width: 100%;
+  text-align: center;
+}
+
+ul a{
+  text-decoration: none;
+}
+
+ul a li{
+  transition: all 0.5s ease;
+  text-decoration: none;
+  color: white;
+}
+
+ul a li.active{
+  transition: all 0.5s ease;
+  font-weight: bold;
+}
+
+/*  HERO BANNER  */
+
+.heroSectionContainer {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+
+
+.descriptionBanner {
+  margin-top: 20px;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.button {
+  height: 55px;
+  position: relative;
+  font-family: "K2D", sans-serif;
+  margin-top: 20px;
+  font-size: 1.2em;
+  transition: box-shadow 0.4s ease, background-color 0.4s ease;
+  background-color: #7529cb;
+  box-shadow: -1px -1px 38px 0px rgba(0, 0, 0, 0.678);
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.button.banner {
+  width: 90%;
+}
+
+.button:hover {
+  box-shadow: -1px -1px 38px 0px rgba(117, 41, 203, 1);
+}
+
+.descriptionBanner h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.descriptionBanner h2 {
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+.bannerDescriptionStrong {
+  padding: 10px;
+  display: block;
+  width: auto;
+  background-color: #7429cb;
+}
+
+.bannerImageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.bannerImageContainer img {
+  width: 60%;
+  filter: drop-shadow(11px 5px 10px #7529cb);
+  display: flex;
+}
+
+.bannerReferenceContainer {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.bannerReference {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerReferenceText {
+  border-bottom: 4px solid;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 23px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.bannerBrand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+.bannerBrand img {
+  width: 60px;
+  height: 60px;
+  object-fit: scale-down;
+}
+
+.bannerBrand h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+/* SERVISE SECTION  */
+
+.titleSection {
+  font-size: 3em;
+  margin: 50px 0px 40px 0px;
+}
+
+.serviceCard {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  margin: 30px 0px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.52);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.serviceCard:nth-child(1):hover {
+  background: linear-gradient(45deg, #000000ec, #164c53e0), url("./assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.webp");
+  background-size: cover;
+}
+
+.serviceCard:nth-child(2):hover {
+  background: linear-gradient(45deg, #000000ec, #174e57e1), url("./assets/photo-1699895143289-958fa10a57c9.webp");
+  background-size: cover;
+}
+
+.serviceCard:nth-child(3):hover {
+  background: linear-gradient(45deg, #000000ec, #217883e0), url("./assets/carlos-muza-hpjSkU2UYSU-unsplash.webp");
+  background-size: cover;
+}
+
+.button.service {
+  width: 90%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.serviceCard:hover .button.service {
+  visibility: visible;
+  opacity: 1;
+}
+
+.iconServiceContainer {
+  width: 90px;
+  background-color: #000000;
+  height: 90px;
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceCard i {
+  font-size: 3em;
+}
+
+.serviceCard h2 {
+  font-size: 2em;
+}
+
+.serviceCard h3 {
+  font-size: 1.5em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Plans Section */
+
+.optionPlansContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.optionPlans {
+  padding: 15px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.optionPlans.selected {
+  border: 1px solid white;
+  background-color: #1a202c;
+}
+
+.cardPlan {
+  gap: 25px;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  background-color: black;
+  padding: 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardPlan.show {
+  transition: opacity 0.5s ease-in , box-shadow 0.5s ease, transform 0.5s ease;;
+  transform: translateY(0);
+  opacity: 1; 
+}
+
+.cardPlan.exit { 
+  transition: opacity 0.5s ease-out , box-shadow 0.5s ease, transform 0.5s ease;;
+  opacity: 0; 
+}
+
+.cardPlan:hover {
+  transform: translateY(-10px);
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+  -webkit-box-shadow: 0px 0px 38px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 38px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 38px -7px rgba(0, 0, 0, 0.75);
+
+}
+
+.cardPlansItemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardPlansItems {
+  list-style: none;
+  font-size: 1.3em;
+  color: #707070;
+  letter-spacing: 1px;
+}
+
+.cardPlansItems.active {
+  color: white;
+}
+
+.cardPlanTitle h4 {
+  margin-top: 5px;
+  font-size: 1.3em;
+  color: rgb(211, 211, 211);
+}
+
+.cardPlan h2 {
+  font-size: 2em;
+}
+
+.cardPlan h3 {
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.button.plan {
+  margin-top: 0px;
+}
+
+.buttonPlanContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Contact */
+.contactImageContainer {
+  display: none;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.contactContainer input {
+  height: 50px;
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.116);
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  font-family: "K2D", sans-serif;
+  font-size: 1.1em;
+}
+
+.contactContainer input::placeholder {
+  color: white;
+  font-family: "K2D", sans-serif;
+}
+
+.contactContainer textarea {
+  height: 150px;
+  padding: 10px;
+  font-size: 1.1em;
+  background-color: rgba(128, 128, 128, 0.116);
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  font-family: "K2D", sans-serif;
+}
+
+.contactContainer textarea::placeholder {
+  color: white;
+  font-family: "K2D", sans-serif;
+}
+
+/* Footer */
+
+footer{
+  display: flex;
+}
+
+.footerLogo{
+  width: 40px;
+}
+
+@media (min-width: 768px) {
+
+  .stellarLogo h1 {
+      display: block;
+  }
+
+  .stellarLogo {
+      display: flex;
+  }
+
+  .homeBanner {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      justify-content: center;
+      min-height: 91vh;
+      flex-direction: column;
+  }
+
+  .heroSectionContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      min-height: 0px;
+  }
+
+  .bannerReference {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .descriptionBanner {
+      width: 60%;
+      text-align: start;
+      align-items: start;
+  }
+
+  .bannerDescriptionStrong {
+      display: inline;
+  }
+
+  .bannerImageContainer {
+      width: 40%;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .button.banner {
+      width: 400px;
+  }
+
+  .bannerImageContainer img {
+      width: 80%;
+  }
+
+  .bannerBrand h1 {
+      font-size: 1.8rem;
+  }
+
+  .burgerMenu {
+      display: none;
+  }
+
+  header nav {
+      width: 45%;
+      display: block;
+      position: relative;
+      top: 0px;
+      background-color: rgba(255, 255, 255, 0);
+  }
+
+  header nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      font-size: 1.3rem;
+      font-weight: 100;
+  }
+}
+
+@media (min-width: 1020px) {
+  header nav {
+      width: 35%;
+  }
+
+  .descriptionBanner h1 {
+      font-size: 3rem;
+  }
+
+  .bannerBrand h1 {
+      font-size: 2.7rem;
+  }
+
+  .homeService {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .serviceCard {
+      width: 32%;
+      margin: 0px;
+  }
+
+  .optionPlans {
+      width: 32%;
+  }
+
+  .optionPlansContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .cardPlansContainer {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .cardPlan {
+      width: 32%;
+  }
+
+  .contactImageContainer {
+      display: flex;
+      width: 40%;
+  }
+
+  .contactContainer {
+      width: 70%;
+  }
+
+  .contactImageContainer img {
+      filter: drop-shadow(0px 0px 12px #000000);
+      animation: space 2s ease-in-out infinite;
+  }
+
+  @keyframes space {
+      0% {
+          transform: translateY(0);
+      }
+
+      50% {
+          transform: translateY(-10px);
+      }
+
+      100% {
+          transform: translateY(0);
+      }
+  }
+
+  .homeContact {
+      display: flex;
+      padding: 40px;
+      background-image: url("./assets/");
+      background-size: cover;
+      border-radius: 10px;
+  }
+}
+
+
+@media (min-width: 1500px) {
+
+  header {
+      padding: 1% 10%;
+  }
+
+  main {
+      margin: 0% 10%;
+  }
+}
