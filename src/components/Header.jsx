@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css'
+import '../App.css'
 import stellarLogo from "../assets/Sin título.svg"
 
 const Header = () => {

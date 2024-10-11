@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import '../App.css'
 import { useState, useEffect } from "react";
 import { plansData } from "../data/plans";
 
