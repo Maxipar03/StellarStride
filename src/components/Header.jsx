@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css'
 import stellarLogo from "../assets/Sin título.svg"
 
 const Header = () => {
@@ -29,12 +30,12 @@ const Header = () => {
 
     return (
         <header>
-            <div class="stellarLogo">
+            <div className="stellarLogo">
                 <img src={stellarLogo} />
                 <h1>StellarStride</h1>
             </div>
-            <div class="burgerMenu">
-                <i class="fa-solid fa-bars"></i>
+            <div className="burgerMenu">
+                <i className="fa-solid fa-bars"></i>
             </div>
             <nav>
                 <ul>

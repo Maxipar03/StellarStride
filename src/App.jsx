@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import earthBanner from "./assets/ai-generated-earth-network-on-transparent-background-free-png-1.webp"
 import stellarLogo from "./assets/Sin título.svg"
 import ServiceCard from './components/ServiceCard'
@@ -9,6 +10,7 @@ import pureWheelLogo from "./assets/reference/trace.svg"
 import astroContact from "./assets/astro.webp"
 import PlanList from './components/PlanCard'
 import './App.css'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -22,39 +24,39 @@ function App() {
     <>
     <Header/>
       <main>
-        <section id='home' class="homeBanner">
-          <div class="heroSectionContainer">
-            <div class="descriptionBanner">
-              <h1>Elevete with <strong class="bannerDescriptionStrong">Growth Solution</strong></h1>
+        <section id='home' className="homeBanner">
+          <div className="heroSectionContainer">
+            <div className="descriptionBanner">
+              <h1>Elevete with <strong className="bannerDescriptionStrong">Growth Solution</strong></h1>
               <h2>Transform your business for the modern world with tailored web development and marketing
                 solutions. Improve processes, increase visibility, and attract more customers. Take the next
                 step—let our Growth Partner service elevate your brand!</h2>
-              <button class="button banner">Start Now <i class="fa-solid fa-angles-right"></i></button>
+              <a href="#plans"><button className="button banner">Start Now <i className="fa-solid fa-angles-right"></i></button></a>
             </div>
-            <div class="bannerImageContainer">
+            <div className="bannerImageContainer">
               <img src={earthBanner} alt="" />
             </div>
           </div>
-          <div class="bannerReferenceContainer">
-            <h1 class="bannerReferenceText">Our clients</h1>
-            <div class="bannerReference">
-              <div class="bannerBrand">
+          <div className="bannerReferenceContainer">
+            <h1 className="bannerReferenceText">Our clients</h1>
+            <div className="bannerReference">
+              <div className="bannerBrand">
                 <img src={pardoLogo} alt="" />
                 <h1>PARDOHNOS</h1>
               </div>
-              <div class="bannerBrand">
+              <div className="bannerBrand">
                 <img src={fbsLogo} />
                 <h1>FB&S</h1>
               </div>
-              <div class="bannerBrand">
+              <div className="bannerBrand">
                 <img src={pureWheelLogo} alt="" />
                 <h1>PureWheel</h1>
               </div>
             </div>
           </div>
         </section>
-        <h1 class="titleSection">Services</h1>
-        <section id='services' class="homeService">
+        <h1 className="titleSection">Services</h1>
+        <section id='services' className="homeService">
           <ServiceCard
             iconClass="fa-solid fa-code"
             title="Web Development"
@@ -77,48 +79,26 @@ function App() {
                 traffic into loyal customers."
           />
         </section>
-        <h1 class="titleSection">Plans</h1>
-        <section id='plans' class="homePlans">
-          <div class="optionPlansContainer">
-            <div onClick={() => handlePlanSelection('webDevelopment')} class="optionPlans selected">
+        <h1 className="titleSection">Plans</h1>
+        <section id='plans' className="homePlans">
+          <div className="optionPlansContainer">
+            <div onClick={() => handlePlanSelection('webDevelopment')}   className={`optionPlans ${selectedPlan === 'webDevelopment' ? 'selected' : ''}`}>
               <h2>Web development</h2>
             </div>
-            <div onClick={() => handlePlanSelection('marketing')} class="optionPlans">
+            <div onClick={() => handlePlanSelection('marketing')}   className={`optionPlans ${selectedPlan === 'marketing' ? 'selected' : ''}`}>
               <h2>Marketing</h2>
             </div>
-            <div onClick={() => handlePlanSelection('growthPartner')} class="optionPlans" >
+            <div onClick={() => handlePlanSelection('growthPartner')}   className={`optionPlans ${selectedPlan === 'growthPartner' ? 'selected' : ''}`} >
               <h2>Growth Partner</h2>
             </div>
           </div>
           <PlanList selectedPlanType={selectedPlan}/>
         </section>
-        <h1 class="titleSection">Contact Us</h1>
-        <section id='contact' class="homeContact">
-          <div class="contactImageContainer">
-            <img class="contactImage" src={astroContact} alt="" />
-          </div>
-          <div class="contactContainer">
-            <input type="text" placeholder="Company" />
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Plans" />
-            <textarea type="text" placeholder="Description"></textarea>
-            <button class="button form">Send Form</button>
-          </div>
+        <h1 className="titleSection">Contact Us</h1>
+        <section id='contact' className="homeContact">
+        <Contact/>
         </section>
-        <footer>
-          <div>
-            <div class="stellarLogo">
-              <img class="footerLogo" src={stellarLogo} />
-              <h1>StellarStride</h1>
-            </div>
-            <h3>From The Earth to the stars we take you far</h3>
-          </div>
-          <div>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-          </div>
-        </footer>
+        <Footer />
       </main>
       <script src="./main.js"></script>
     </>

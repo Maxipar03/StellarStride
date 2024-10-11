@@ -419,6 +419,43 @@ ul a li.active{
 
 footer{
   display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 30px 20px 30px 20px;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+footer a{
+  color: white;
+}
+
+footer i{
+  cursor: pointer;
+}
+
+.stellarLogoFooter{
+  display: flex;
+  justify-content: center;
+}
+
+.socialFooter{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5em;
+  width: 60%;
+  margin-bottom: 20px;
 }
 
 .footerLogo{
@@ -505,6 +542,22 @@ footer{
       font-size: 1.3rem;
       font-weight: 100;
   }
+
+  footer{
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .stellarLogoFooter{
+    justify-content: flex-start;
+  }
+
+  .socialFooter{
+    width: 35%;
+    margin-bottom: 0px;
+  }
 }
 
 @media (min-width: 1020px) {
@@ -555,7 +608,7 @@ footer{
   }
 
   .contactContainer {
-      width: 70%;
+      width: 50%;
   }
 
   .contactImageContainer img {
@@ -580,9 +633,14 @@ footer{
   .homeContact {
       display: flex;
       padding: 40px;
-      background-image: url("./assets/");
+      background-image: url("./assets/dark-starry-sky-stars-4k-.webp");
       background-size: cover;
+      justify-content: space-around;
       border-radius: 10px;
+  }
+
+  .socialFooter{
+    width: 20%;
   }
 }
 
