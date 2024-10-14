@@ -1,16 +1,16 @@
 import React from "react";
-import '../App.css'
+import '../index.css'
 import stellarLogo from "../assets/Sin título.svg"
 
 const Footer = () => {
     return (
         <footer>
-            <div>
+            <div className="stellarContainerFooter">
                 <div className="stellarLogoFooter">
-                    <img className="footerLogo" src={stellarLogo} />
+                    <img className="footerLogo" src={stellarLogo} alt="StellarLogo" />
                     <h1>StellarStride</h1>
                 </div>
-                <h3>From The Earth to the stars we take you far</h3>
+                <h3 className="textSloganFooter">From The Earth to the stars we take you far</h3>
             </div>
             <div className='socialFooter'>
                 <a href="https://www.instagram.com/stellarstride.it/" target="_blank"><i className="fa-brands fa-instagram"></i></a>

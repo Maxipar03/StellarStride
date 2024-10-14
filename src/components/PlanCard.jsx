@@ -1,5 +1,5 @@
 import React from "react";
-import '../App.css'
+import '../index.css'
 import { useState, useEffect } from "react";
 import { plansData } from "../data/plans";
 
@@ -47,8 +47,8 @@ const PlanCard = ({ plan, index, isExiting }) => {
                 ))}
             </ul>
             <div className="buttonPlanContainer">
-                <button className="button plan">Schedule a meet</button>
-                <button className="button plan">Request a quote</button>
+                <a href={plan.link} target="_blank" className="button plan">Schedule a meet</a>
+                <a href="#contact" className="button plan">Request a quote</a>
             </div>
         </div>
     );

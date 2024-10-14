@@ -1,5 +1,5 @@
 import React from "react";
-import '../App.css'
+import '../index.css'
 
 const ServiceCard = ({ iconClass, title, description }) => {
     return (
@@ -9,7 +9,6 @@ const ServiceCard = ({ iconClass, title, description }) => {
             </div>
             <h2>{title}</h2>
             <h3>{description}</h3>
-            <button className="button service">View More</button>
         </div>
     );
 };

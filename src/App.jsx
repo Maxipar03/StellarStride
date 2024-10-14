@@ -9,7 +9,8 @@ import pardoLogo from "./assets/reference/Logo.svg"
 import pureWheelLogo from "./assets/reference/trace.svg"
 import astroContact from "./assets/astro.webp"
 import PlanList from './components/PlanCard'
-import './App.css'
+import Process from './components/Proces'
+import "./index.css"
 import Contact from './components/Contact'
 
 function App() {
@@ -31,25 +32,25 @@ function App() {
               <h2>Transform your business for the modern world with tailored web development and marketing
                 solutions. Improve processes, increase visibility, and attract more customers. Take the next
                 step—let our Growth Partner service elevate your brand!</h2>
-              <a href="#plans"><button className="button banner">Start Now <i className="fa-solid fa-angles-right"></i></button></a>
+              <a href="#plans" className="button banner">Start Now <i id='btnIcon' className="fa-solid fa-angles-right"></i></a>
             </div>
             <div className="bannerImageContainer">
-              <img src={earthBanner} alt="" />
+              <img src={earthBanner} alt="Earth" />
             </div>
           </div>
           <div className="bannerReferenceContainer">
             <h1 className="bannerReferenceText">Our clients</h1>
             <div className="bannerReference">
               <div className="bannerBrand">
-                <img src={pardoLogo} alt="" />
+                <img src={pardoLogo} alt="pardoLogo" />
                 <h1>PARDOHNOS</h1>
               </div>
               <div className="bannerBrand">
-                <img src={fbsLogo} />
+                <img src={fbsLogo} alt='FBSLogo' />
                 <h1>FB&S</h1>
               </div>
               <div className="bannerBrand">
-                <img src={pureWheelLogo} alt="" />
+                <img src={pureWheelLogo} alt="PureWheelLogo" />
                 <h1>PureWheel</h1>
               </div>
             </div>
@@ -78,6 +79,10 @@ function App() {
                 online. A powerful website attracts visitors, while strategic marketing drives engagement, turning
                 traffic into loyal customers."
           />
+        </section>
+        <h1 className="titleSection">Process</h1>
+        <section id='process' className="homeProcess">
+        <Process/>
         </section>
         <h1 className="titleSection">Plans</h1>
         <section id='plans' className="homePlans">

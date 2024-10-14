@@ -70,11 +70,27 @@ nav {
   text-align: center;
 }
 
+nav.open {
+  height: 100vh;
+  left: 0;
+  width: 100%;
+  top: 0px;
+  z-index: -1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.986);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 ul a{
   text-decoration: none;
 }
 
 ul a li{
+  font-size: 4em;
+  text-align: left;
+  margin-left: 20px;
   transition: all 0.5s ease;
   text-decoration: none;
   color: white;
@@ -83,6 +99,7 @@ ul a li{
 ul a li.active{
   transition: all 0.5s ease;
   font-weight: bold;
+  color: rgb(133, 28, 133);
 }
 
 /*  HERO BANNER  */
@@ -109,6 +126,7 @@ ul a li.active{
   position: relative;
   font-family: "K2D", sans-serif;
   margin-top: 20px;
+  display: flex;
   font-size: 1.2em;
   transition: box-shadow 0.4s ease, background-color 0.4s ease;
   background-color: #7529cb;
@@ -119,6 +137,14 @@ ul a li.active{
   font-weight: 900;
   cursor: pointer;
   z-index: 1;
+  align-items: center;
+  justify-content: center;
+  text-decoration-line: none;
+}
+
+#btnIcon{
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .button.banner {
@@ -154,6 +180,7 @@ ul a li.active{
 }
 
 .bannerImageContainer img {
+  position: relative;
   width: 60%;
   filter: drop-shadow(11px 5px 10px #7529cb);
   display: flex;
@@ -197,6 +224,64 @@ ul a li.active{
   font-weight: 100;
 }
 
+/* PROCESS */
+
+.homeProcess{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.procesCard{
+  background: rgb(0 0 0 / 81%);
+  border-radius: 16px;
+  backdrop-filter: blur(3.7px);
+  padding: 20px;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.processItemsContainer{
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.processNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  color: rgb(255 255 255 / 10%);
+  z-index: 1;
+}
+
+.processItems li{
+  list-style: none;
+  font-size: 1.3em;
+  font-weight: 100;
+  margin: 10px 0px;
+}
+
+.ProcessImgContainer{
+  width: 30%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProcessImgContainer img{
+  max-width: 70px;
+  filter: invert(70%);
+}
+
 /* SERVISE SECTION  */
 
 .titleSection {
@@ -238,18 +323,6 @@ ul a li.active{
   background-size: cover;
 }
 
-.button.service {
-  width: 90%;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-
-.serviceCard:hover .button.service {
-  visibility: visible;
-  opacity: 1;
-}
-
 .iconServiceContainer {
   width: 90px;
   background-color: #000000;
@@ -271,6 +344,7 @@ ul a li.active{
 
 .serviceCard h3 {
   font-size: 1.5em;
+  margin-bottom: 20px;
   font-weight: 100;
   letter-spacing: 1px;
   text-align: center;
@@ -303,7 +377,9 @@ ul a li.active{
   display: none;
   flex-direction: column;
   opacity: 0;
-  background-color: black;
+  background: rgb(0 0 0 / 81%);
+  border-radius: 16px;
+  backdrop-filter: blur(3.7px);
   padding: 20px;
   margin-top: 30px;
   display: flex;
@@ -363,6 +439,7 @@ ul a li.active{
 }
 
 .button.plan {
+  width: 100%;
   margin-top: 0px;
 }
 
@@ -379,6 +456,7 @@ ul a li.active{
 
 .contactContainer {
   display: flex;
+  width: 100%;
   gap: 20px;
   flex-direction: column;
 }
@@ -442,6 +520,16 @@ footer a{
 
 footer i{
   cursor: pointer;
+}
+
+.stellarContainerFooter{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textSloganFooter{
+  text-align: center;
 }
 
 .stellarLogoFooter{
@@ -527,8 +615,12 @@ footer i{
       display: none;
   }
 
+  header{
+    padding: 1.5% 5%;
+  }
+
   header nav {
-      width: 45%;
+      width: 59%;
       display: block;
       position: relative;
       top: 0px;
@@ -543,11 +635,30 @@ footer i{
       font-weight: 100;
   }
 
+  ul a li{
+    font-size: 1em;
+    text-align: center;
+    margin-left: 0px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: white;
+  }
+  
+  ul a li.active{
+    transition: all 0.5s ease;
+    font-weight: bold;
+    color: white
+  }
+
   footer{
     margin-top: 30px;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 40px;
+  }
+
+  .stellarContainerFooter{
+    gap: 0px;
   }
 
   .stellarLogoFooter{
@@ -607,6 +718,12 @@ footer i{
       width: 40%;
   }
 
+  form{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
   .contactContainer {
       width: 50%;
   }
@@ -642,6 +759,23 @@ footer i{
   .socialFooter{
     width: 20%;
   }
+
+  .homeProcess {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .procesCard{
+    margin: 0px;
+  }
+
+  .processNumber{
+    font-size: 8.7em;
+  }
+
+  .ProcessImgContainer img {
+    max-width: 80px;
+}
 }
 
 

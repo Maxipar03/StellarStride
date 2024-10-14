@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css'
+import '../index.css'
 import stellarLogo from "../assets/Sin título.svg"
 
 const Header = () => {
 
     const [activeSection, setActiveSection] = useState('');
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,19 +29,24 @@ const Header = () => {
         };
     }, []);
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header>
             <div className="stellarLogo">
-                <img src={stellarLogo} />
+                <img src={stellarLogo} alt='StellarLogo'/>
                 <h1>StellarStride</h1>
             </div>
-            <div className="burgerMenu">
-                <i className="fa-solid fa-bars"></i>
+            <div className="burgerMenu" onClick={toggleMenu}>
+                {isMenuOpen ? <i class="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
             </div>
-            <nav>
+            <nav className={isMenuOpen ? 'open' : ''}>
                 <ul>
                     <a href="#home"><li  className= {activeSection === 'home' ? 'active' : ''}>Home</li></a>
                     <a href="#services"><li  className= {activeSection === 'services' ? 'active' : ''}>Services</li></a>
+                    <a href="#process"><li  className= {activeSection === 'process' ? 'active' : ''}>Proces</li></a>
                     <a href="#plans"><li  className={activeSection === 'plans' ? 'active' : ''}>Plans</li></a>
                     <a href="#contact"><li  className={activeSection === 'contact' ? 'active' : ''}>Contact us</li></a>
                 </ul>
