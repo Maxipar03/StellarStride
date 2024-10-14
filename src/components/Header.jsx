@@ -46,7 +46,7 @@ const Header = () => {
                 <ul>
                     <a href="#home"><li  className= {activeSection === 'home' ? 'active' : ''}>Home</li></a>
                     <a href="#services"><li  className= {activeSection === 'services' ? 'active' : ''}>Services</li></a>
-                    <a href="#process"><li  className= {activeSection === 'process' ? 'active' : ''}>Proces</li></a>
+                    <a href="#process"><li  className= {activeSection === 'process' ? 'active' : ''}>Process</li></a>
                     <a href="#plans"><li  className={activeSection === 'plans' ? 'active' : ''}>Plans</li></a>
                     <a href="#contact"><li  className={activeSection === 'contact' ? 'active' : ''}>Contact us</li></a>
                 </ul>

@@ -550,6 +550,23 @@ footer i{
   width: 40px;
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #040205; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dddbdb; 
+  border-radius: 3px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media (min-width: 768px) {
 
   .stellarLogo h1 {

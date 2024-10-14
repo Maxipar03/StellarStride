@@ -58,9 +58,9 @@ const Process = () => {
                 <div className="processItemsContainer">
                     <h2>Execute Service</h2>
                     <ul className="processItems">
-                        <li>Review a Customized Plan</li>
-                        <li>See transparent Pricing</li>
-                        <li>Ask for Adjustment</li>
+                        <li>Aprove Start The Project</li>
+                        <li>Track Progress in Real-Time</li>
+                        <li>Recibe Quality Delivery</li>
                     </ul>
                 </div>
             </div>
