@@ -22,7 +22,7 @@ export const plansData = {
         {
             title: "Web Site",
             description: "Boost Sales with Advanced Features and Custom Integrations.",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-7",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
                 points: [
                     { text: 'Design UX/UI', highlighted: true },
                     { text: 'Web Pages (4)', highlighted: true },
@@ -41,7 +41,7 @@ export const plansData = {
         {
             title: "E-Commerce",
             description: "Drive Growth with a Fully Custom E-commerce Solution",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-6",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'Design UX/UI', highlighted: true },
                 { text: 'Web Pages (4)', highlighted: true },
@@ -62,7 +62,7 @@ export const plansData = {
         {
             title: "Basic",
             description: "Kickstart Your Online Presence",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-5",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'Social Media Management', highlighted: true },
                 { text: 'Graphic Design', highlighted: true },
@@ -81,7 +81,7 @@ export const plansData = {
         {
             title: "Web Store",
             description: "Enhance Your Brand with Strategic Growth",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-1",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'Social Media Management', highlighted: true },
                 { text: 'Graphic Design', highlighted: true },
@@ -100,7 +100,7 @@ export const plansData = {
         {
             title: "Email Marketing",
             description: "Drive engagement with personalized emails.",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-4",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'Social Media Management', highlighted: true },
                 { text: 'Graphic Design', highlighted: true },
@@ -121,7 +121,7 @@ export const plansData = {
         {
             title: "Comprehensive Strategy",
             description: "A holistic approach to digital growth.",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-3",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'Landing Page (Web Dev Plan)', highlighted: true },
                 { text: 'Marketing Basic (Marketing Plan)', highlighted: true },
@@ -130,7 +130,7 @@ export const plansData = {
         {
             title: "Brand Development",
             description: "Building a strong and recognizable brand.",
-            link: "https://calendly.com/stellarstride/30-minute-meeting-clone-2",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'Web Site (Web Dev Plan)', highlighted: true },
                 { text: 'Web Store (Marketing Plan)', highlighted: true },
@@ -139,7 +139,7 @@ export const plansData = {
         {
             title: "Customer Retention",
             description: "Turn visitors into long-term loyal customers.",
-            link: "https://calendly.com/stellarstride/30min",
+            link: "https://calendly.com/stellarstride/30-minute-meeting-clone",
             points: [
                 { text: 'E-Commerce (Web Dev Plan)', highlighted: true },
                 { text: 'Email Marketing (Marketing Plan)', highlighted: true },

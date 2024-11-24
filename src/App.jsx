@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import earthBanner from "./assets/ai-generated-earth-network-on-transparent-background-free-png-1.webp"
@@ -9,11 +9,16 @@ import pardoLogo from "./assets/reference/Logo.svg"
 import pureWheelLogo from "./assets/reference/trace.svg"
 import astroContact from "./assets/astro.webp"
 import PlanList from './components/PlanCard'
+import initializeGA from "./analytics";
 import Process from './components/Proces'
 import "./index.css"
 import Contact from './components/Contact'
 
 function App() {
+
+  useEffect(() => {
+    initializeGA();
+  }, []);
 
   const [selectedPlan, setSelectedPlan] = useState("webDevelopment");
 
