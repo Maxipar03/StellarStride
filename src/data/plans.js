@@ -1,4 +1,5 @@
 export const plansData = {
+
     webDevelopment: [
         {
             title: "Landing Page",
@@ -58,6 +59,7 @@ export const plansData = {
             ],
         },
     ],
+
     marketing: [
         {
             title: "Basic",
@@ -117,6 +119,7 @@ export const plansData = {
             ],
         },
     ],
+
     growthPartner: [
         {
             title: "Comprehensive Strategy",
@@ -146,5 +149,6 @@ export const plansData = {
             ]
         },
     ],
+    
 };
 

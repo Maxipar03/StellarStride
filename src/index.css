@@ -12,21 +12,23 @@ html {
 
 body {
   background: rgb(26, 7, 48);
-  background: radial-gradient(circle, #1a0730 62%, rgba(0, 0, 0, 1) 100%);
+  background: #0a0a0a;
   font-family: "K2D", sans-serif;
   color: white;
-}
-
-main {
-  margin: 0% 5%;
+  background-color: #0a0a0a;
+  opacity: 1;
+  background-image:  linear-gradient(#0e0e0e 1.1px, transparent 1.1px), linear-gradient(to right, #0e0e0e 1.1px, #0a0a0a 1.1px);
+  background-size: 22px 22px;
 }
 
 header {
   width: 100%;
-  padding: 2.5% 5%;
-  position: sticky;
+  height: 75px;
+  position: fixed;
+  margin-top: 30px;
+  padding: 0% 5%;
   top: 0px;
-  z-index: 5;
+  z-index: 20;
   background: rgba(5, 5, 5, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
@@ -34,7 +36,22 @@ header {
   display: flex;
   align-items: center;
   flex-direction: row;
+  box-sizing: border-box;
   justify-content: space-between;
+}
+
+.offerHeaderText {
+  height: 30px;
+  font-size: 1em;
+  display: flex;
+  background-color: blueviolet;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
 }
 
 .stellarLogo h1 {
@@ -47,7 +64,7 @@ header i {
 
 header h1 {
   color: white;
-  font-size: 2em;
+  font-size: 1.6rem;
   margin-left: 10px;
 }
 
@@ -55,8 +72,13 @@ header img {
   height: 45px;
 }
 
-section{
-  scroll-margin-top: 170px;
+.homeBanner {
+  margin: 0px
+}
+
+section {
+  margin: 50px 0px;
+  padding: 50px 0px;
 }
 
 nav {
@@ -83,11 +105,11 @@ nav.open {
   align-items: flex-start;
 }
 
-ul a{
+ul a {
   text-decoration: none;
 }
 
-ul a li{
+ul a li {
   font-size: 4em;
   text-align: left;
   margin-left: 20px;
@@ -96,7 +118,7 @@ ul a li{
   color: white;
 }
 
-ul a li.active{
+ul a li.active {
   transition: all 0.5s ease;
   font-weight: bold;
   color: rgb(133, 28, 133);
@@ -104,22 +126,64 @@ ul a li.active{
 
 /*  HERO BANNER  */
 
+.homeBanner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.homeBanner video {
+  position: absolute;
+  object-position: right;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
 .heroSectionContainer {
-  min-height: 92vh;
+  position: absolute;
+  z-index: 10;
+  margin-top: 105px;
+  padding: 10% 5%;
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly
+  justify-content: flex-end;
+
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-.descriptionBanner {
+.heroSectionContainer h1 {
+  font-size: 2.4em;
+  font-weight: 100;
+}
+
+.strongBanner {
+  background: linear-gradient(90deg, rgba(79, 198, 142, 1) 0%, rgba(132, 167, 84, 1) 49%, rgba(138, 43, 226, 1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.servicesBanner {
+  position: relative;
   margin-top: 20px;
-  gap: 25px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+  color: #ddd8d8;
 }
+
+.servicesBanner p {
+  font-size: 1.5em;
+  position: relative;
+}
+
 
 .button {
   height: 55px;
@@ -142,212 +206,131 @@ ul a li.active{
   text-decoration-line: none;
 }
 
-#btnIcon{
+#btnIcon {
   padding-top: 5px;
   padding-left: 5px;
 }
 
-.button.banner {
-  width: 90%;
-}
-
-.button:hover {
-  box-shadow: -1px -1px 38px 0px rgba(117, 41, 203, 1);
-}
-
-.descriptionBanner h1 {
-  font-size: 2em;
-  font-weight: 500;
-}
-
-.descriptionBanner h2 {
-  font-weight: 100;
-  font-size: 1.5em;
-}
-
-.bannerDescriptionStrong {
-  padding: 10px;
-  display: block;
-  width: auto;
-  background-color: #7429cb;
-}
-
-.bannerImageContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-.bannerImageContainer img {
-  position: relative;
-  width: 60%;
-  filter: drop-shadow(11px 5px 10px #7529cb);
-  display: flex;
-}
-
-.bannerReferenceContainer {
-  margin-top: 40px;
-  width: 100%;
-}
-
-.bannerReference {
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.bannerReferenceText {
-  border-bottom: 4px solid;
-  font-size: 2.5em;
-  padding-bottom: 10px;
-  margin-bottom: 23px;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-}
-
-.bannerBrand {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 25px;
-}
-
-.bannerBrand img {
-  width: 60px;
-  height: 60px;
-  object-fit: scale-down;
-}
-
-.bannerBrand h1 {
-  font-size: 2.5rem;
-  font-weight: 100;
-}
-
 /* PROCESS */
 
-.homeProcess{
-  display: grid;
-  grid-template-columns: 1fr;
+.processNumber {
+  font-size: 6rem;
+  color: rgb(255 255 255 / 20%);
+  z-index: 1;
 }
 
-.procesCard{
-  background: rgb(0 0 0 / 81%);
-  border-radius: 16px;
-  backdrop-filter: blur(3.7px);
-  padding: 20px;
-  margin: 20px 0px;
+.ProcessImgContainer img {
+  max-width: 70px;
+  filter: invert(70%);
+}
+
+.processContent {
+  padding: 0% 5%;
+  display: grid;
+  gap: 60px;
+}
+
+.processItemsContainer h2 {
+  font-size: 2.5em;
+}
+
+.processItemsContainer p {
+  font-size: 1.4em;
+  color: rgb(194, 194, 194);
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+/* ABOUT US SECTION */
+
+.aboutUsContent {
+  padding: 0% 5%;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.accordionContent {
+  height: 0px;
+  font-size: 1.1em;
+  font-weight: 100;
+  overflow: hidden;
+}
+
+.accordionContent p {
+  margin: 20px;
+}
+
+.accordionOption {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+.AboutUsTitleBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.processItemsContainer{
-  padding-left: 30px;
-  position: relative;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-}
-
-.processNumber {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 7rem;
-  color: rgb(255 255 255 / 10%);
-  z-index: 1;
-}
-
-.processItems li{
-  list-style: none;
-  font-size: 1.3em;
+.aboutUsTitle {
+  font-size: 1.4em;
   font-weight: 100;
-  margin: 10px 0px;
+  padding-bottom: 10px;
 }
 
-.ProcessImgContainer{
-  width: 30%;
-  position: relative;
+.fa-angle-down {
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.fa-angle-down.rotated {
+  transform: rotate(180deg);
+}
+
+.aboutUsSvg {
+  width: 100%;
+  max-height: 300px;
+}
+
+.aboutUsContentImg {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.ProcessImgContainer img{
-  max-width: 70px;
-  filter: invert(70%);
 }
 
 /* SERVISE SECTION  */
 
 .titleSection {
   font-size: 3em;
-  margin: 50px 0px 40px 0px;
+  margin-bottom: 50px;
+  padding: 0% 5%;
+  text-align: center
+}
+
+.sectionContent {
+  padding: 0% 5%;
+  display: grid;
+  gap: 20px;
 }
 
 .serviceCard {
   display: flex;
-  gap: 15px;
   flex-direction: column;
-  margin: 30px 0px;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.52);
-  border-radius: 16px;
-  background: rgba(0, 0, 0, 0.37);
-  border-radius: 16px;
-  backdrop-filter: blur(3.7px);
-  -webkit-backdrop-filter: blur(3.7px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(13, 13, 21, 0.57);
 }
 
-.serviceCard:nth-child(1):hover {
-  background: linear-gradient(45deg, #000000ec, #164c53e0), url("./assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.webp");
-  background-size: cover;
-}
-
-.serviceCard:nth-child(2):hover {
-  background: linear-gradient(45deg, #000000ec, #174e57e1), url("./assets/photo-1699895143289-958fa10a57c9.webp");
-  background-size: cover;
-}
-
-.serviceCard:nth-child(3):hover {
-  background: linear-gradient(45deg, #000000ec, #217883e0), url("./assets/carlos-muza-hpjSkU2UYSU-unsplash.webp");
-  background-size: cover;
-}
-
-.iconServiceContainer {
-  width: 90px;
-  background-color: #000000;
-  height: 90px;
-  display: flex;
-  border: 1px solid gray;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-}
-
-.serviceCard i {
-  font-size: 3em;
-}
-
-.serviceCard h2 {
-  font-size: 2em;
-}
-
-.serviceCard h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+.serviceText {
+  font-size: 1.2em;
   font-weight: 100;
-  letter-spacing: 1px;
-  text-align: center;
 }
 
 /* Plans Section */
@@ -360,41 +343,30 @@ ul a li.active{
 
 .optionPlans {
   padding: 15px;
-  background-color: black;
-  border-radius: 10px;
   text-align: center;
   cursor: pointer;
 }
 
 .optionPlans.selected {
-  border: 1px solid white;
-  background-color: #1a202c;
+  border-bottom: 3px solid;
 }
 
 .cardPlan {
   gap: 25px;
   transition: box-shadow 0.5s ease, transform 0.5s ease;
-  display: none;
   flex-direction: column;
   opacity: 0;
-  background: rgb(0 0 0 / 81%);
-  border-radius: 16px;
-  backdrop-filter: blur(3.7px);
+  backdrop-filter: blur(0px) saturate(200%);
+  -webkit-backdrop-filter: blur(0px) saturate(200%);
+  background-color: rgba(13, 13, 21, 0.57);
   padding: 20px;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
 }
 
-.cardPlan.show {
-  transition: opacity 0.5s ease-in , box-shadow 0.5s ease, transform 0.5s ease;;
-  transform: translateY(0);
-  opacity: 1; 
-}
-
-.cardPlan.exit { 
-  transition: opacity 0.5s ease-out , box-shadow 0.5s ease, transform 0.5s ease;;
-  opacity: 0; 
+.plansContent {
+  padding: 0% 5%;
 }
 
 .cardPlan:hover {
@@ -450,6 +422,11 @@ ul a li.active{
 }
 
 /* Contact */
+
+form{
+  padding: 0% 5%;
+}
+
 .contactImageContainer {
   display: none;
 }
@@ -457,19 +434,24 @@ ul a li.active{
 .contactContainer {
   display: flex;
   width: 100%;
-  gap: 20px;
+  gap: 35px;
   flex-direction: column;
 }
 
 .contactContainer input {
   height: 50px;
   padding: 10px;
-  background-color: rgba(128, 128, 128, 0.116);
-  border: 2px solid white;
-  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.199);
+  border: 0px;
+  border-bottom: 1px solid white;
   color: white;
   font-family: "K2D", sans-serif;
   font-size: 1.1em;
+  width: 100%;
+}
+
+.inputContainer{
+  position: relative;
 }
 
 .contactContainer input::placeholder {
@@ -477,13 +459,24 @@ ul a li.active{
   font-family: "K2D", sans-serif;
 }
 
+.contactContainer input:focus{
+outline: none;
+}
+
+.errorText {
+  position: absolute;
+  margin-top: 5px;
+  color: red;
+}
+
 .contactContainer textarea {
   height: 150px;
+  width: 100%;
   padding: 10px;
   font-size: 1.1em;
-  background-color: rgba(128, 128, 128, 0.116);
-  border: 2px solid white;
-  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.199);
+  border: 0px;
+  border-bottom: 1px solid white;
   color: white;
   font-family: "K2D", sans-serif;
 }
@@ -495,13 +488,13 @@ ul a li.active{
 
 /* Footer */
 
-footer{
+footer {
   display: flex;
   position: relative;
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  padding: 30px 20px 30px 20px;
+  padding: 40px 5%;
 }
 
 footer::before {
@@ -510,34 +503,34 @@ footer::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px; 
+  height: 2px;
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
 }
 
-footer a{
+footer a {
   color: white;
 }
 
-footer i{
+footer i {
   cursor: pointer;
 }
 
-.stellarContainerFooter{
+.stellarContainerFooter {
   gap: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.textSloganFooter{
+.textSloganFooter {
   text-align: center;
 }
 
-.stellarLogoFooter{
+.stellarLogoFooter {
   display: flex;
   justify-content: center;
 }
 
-.socialFooter{
+.socialFooter {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -546,21 +539,21 @@ footer i{
   margin-bottom: 20px;
 }
 
-.footerLogo{
+.footerLogo {
   width: 40px;
 }
 
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #040205; 
+  background: #040205;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dddbdb; 
-  border-radius: 3px; 
+  background: #dddbdb;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -569,120 +562,94 @@ footer i{
 
 @media (min-width: 768px) {
 
+  section{
+    margin: 80px 0px;
+  }
+
   .stellarLogo h1 {
-      display: block;
+    display: block;
+    font-size: 1.5rem;
   }
 
   .stellarLogo {
-      display: flex;
-  }
-
-  .homeBanner {
-      display: flex;
-      align-items: center;
-      gap: 35px;
-      justify-content: center;
-      min-height: 91vh;
-      flex-direction: column;
-  }
-
-  .heroSectionContainer {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      min-height: 0px;
-  }
-
-  .bannerReference {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-  }
-
-  .descriptionBanner {
-      width: 60%;
-      text-align: start;
-      align-items: start;
-  }
-
-  .bannerDescriptionStrong {
-      display: inline;
-  }
-
-  .bannerImageContainer {
-      width: 40%;
-      padding: 0px;
-      display: flex;
-      justify-content: center;
-  }
-
-  .button.banner {
-      width: 400px;
-  }
-
-  .bannerImageContainer img {
-      width: 80%;
-  }
-
-  .bannerBrand h1 {
-      font-size: 1.8rem;
+    display: flex;
+    width: auto;
+    align-items: center;
   }
 
   .burgerMenu {
-      display: none;
+    display: none;
   }
 
-  header{
+  .aboutUsSvg {
+    max-height: 450px;
+  }
+
+  header {
     padding: 1.5% 5%;
   }
 
+  header img{
+    width: 35px;
+  }
+
   header nav {
-      width: 59%;
-      display: block;
-      position: relative;
-      top: 0px;
-      background-color: rgba(255, 255, 255, 0);
+    width: 59%;
+    display: block;
+    position: relative;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   header nav ul {
-      display: flex;
-      list-style: none;
-      justify-content: space-around;
-      font-size: 1.3rem;
-      font-weight: 100;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: 100;
   }
 
-  ul a li{
-    font-size: 1em;
+  ul a li {
+    font-size: 1.2rem;
     text-align: center;
     margin-left: 0px;
     transition: all 0.5s ease;
     text-decoration: none;
     color: white;
   }
-  
-  ul a li.active{
+
+  ul a li.active {
     transition: all 0.5s ease;
     font-weight: bold;
     color: white
   }
 
-  footer{
+  .processContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    padding: 40px 10%;
     margin-top: 30px;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 40px;
   }
 
-  .stellarContainerFooter{
+  .aboutUsContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  .stellarContainerFooter {
     gap: 0px;
   }
 
-  .stellarLogoFooter{
+  .stellarLogoFooter {
     justify-content: flex-start;
   }
 
-  .socialFooter{
+  .socialFooter {
     width: 35%;
     margin-bottom: 0px;
   }
@@ -690,119 +657,112 @@ footer i{
 
 @media (min-width: 1020px) {
   header nav {
-      width: 35%;
+    width: 35%;
   }
 
-  .descriptionBanner h1 {
-      font-size: 3rem;
+  .heroSectionContainer {
+    width: 60%;
   }
 
-  .bannerBrand h1 {
-      font-size: 2.7rem;
+  .heroSectionContainer h1 {
+    font-size: 3.4rem;
   }
 
-  .homeService {
-      display: flex;
-      justify-content: space-between;
-  }
-
-  .serviceCard {
-      width: 32%;
-      margin: 0px;
-  }
-
-  .optionPlans {
-      width: 32%;
+  .sectionContent {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .optionPlansContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .optionPlans {
+    padding: 15px 30px;
   }
 
   .cardPlansContainer {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   .cardPlan {
-      width: 32%;
+    width: 32%;
   }
 
   .contactImageContainer {
-      display: flex;
-      width: 40%;
+    display: block;
+    display: flex;
+    justify-content: center;
   }
 
-  form{
-    display: flex;
+  form {
+    display: grid;
+    gap: 60px;
     width: 100%;
-    justify-content: space-around;
-  }
-  
-  .contactContainer {
-      width: 50%;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contactImageContainer img {
-      filter: drop-shadow(0px 0px 12px #000000);
-      animation: space 2s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 12px #000000);
+    animation: space 2s ease-in-out infinite;
+    width: 80%;
+    object-fit: contain;
   }
 
   @keyframes space {
-      0% {
-          transform: translateY(0);
-      }
+    0% {
+      transform: translateY(0);
+    }
 
-      50% {
-          transform: translateY(-10px);
-      }
+    50% {
+      transform: translateY(-10px);
+    }
 
-      100% {
-          transform: translateY(0);
-      }
+    100% {
+      transform: translateY(0);
+    }
   }
 
-  .homeContact {
-      display: flex;
-      padding: 40px;
-      background-image: url("./assets/dark-starry-sky-stars-4k-.webp");
-      background-size: cover;
-      justify-content: space-around;
-      border-radius: 10px;
-  }
-
-  .socialFooter{
+  .socialFooter {
     width: 20%;
   }
 
-  .homeProcess {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-  }
-
-  .procesCard{
-    margin: 0px;
-  }
-
-  .processNumber{
-    font-size: 8.7em;
+  .processNumber {
+    font-size: 6.5em;
   }
 
   .ProcessImgContainer img {
     max-width: 80px;
+  }
 }
-}
-
 
 @media (min-width: 1500px) {
 
-  header {
-      padding: 1% 10%;
+  .heroSectionContainer {
+    width: 60%;
+    padding: 10% 10%;
   }
 
-  main {
-      margin: 0% 10%;
+  .titleSection {
+    padding: 0% 10%;
   }
+
+  .aboutUsTitle,
+  .fa-angle-down {
+    font-size: 1.6em;
+  }
+
+  .sectionContent,
+.processContent,
+  .aboutUsContent,
+  .plansContent, form {
+    padding: 0% 10%;
+  }
+
+  header {
+    padding: 1% 10%;
+  }
+
 }

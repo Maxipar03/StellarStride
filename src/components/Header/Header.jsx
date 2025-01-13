@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../index.css'
-import stellarLogo from "../assets/Sin título.svg"
+import '../../index.css'
+import { HeaderOffer } from '../HeaderOffer/HeaderOffer';
+import stellarLogo from "../../assets/Sin título.svg"
 
-const Header = () => {
+export const Header = () => {
 
     const [activeSection, setActiveSection] = useState('');
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -34,10 +35,12 @@ const Header = () => {
     };
 
     return (
+        <>
+        <HeaderOffer/>
         <header>
             <div className="stellarLogo">
                 <img src={stellarLogo} alt='StellarLogo'/>
-                <h1>StellarStride</h1>
+                <h1>STELLARSTRIDE</h1>
             </div>
             <div className="burgerMenu" onClick={toggleMenu}>
                 {isMenuOpen ? <i class="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
@@ -46,14 +49,14 @@ const Header = () => {
                 <ul>
                     <a href="#home"><li  className= {activeSection === 'home' ? 'active' : ''}>Home</li></a>
                     <a href="#services"><li  className= {activeSection === 'services' ? 'active' : ''}>Services</li></a>
+                    <a href="#aboutUs"><li  className= {activeSection === 'aboutUs' ? 'active' : ''}>FAQ</li></a>
                     <a href="#process"><li  className= {activeSection === 'process' ? 'active' : ''}>Process</li></a>
                     <a href="#plans"><li  className={activeSection === 'plans' ? 'active' : ''}>Plans</li></a>
                     <a href="#contact"><li  className={activeSection === 'contact' ? 'active' : ''}>Contact us</li></a>
                 </ul>
             </nav>
         </header>
+        </>
     )
 }
 
-
-export default Header;

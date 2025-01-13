@@ -1,8 +1,8 @@
 import React from "react";
-import '../index.css'
-import stellarLogo from "../assets/Sin título.svg"
+import '../../index.css'
+import stellarLogo from "../../assets/Sin título.svg"
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer>
             <div className="stellarContainerFooter">
@@ -21,4 +21,3 @@ const Footer = () => {
     );
 };
 
-export default Footer;
