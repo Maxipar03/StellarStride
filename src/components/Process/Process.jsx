@@ -43,12 +43,12 @@ export const Process = () => {
                 <ProcessCard
                     className="process-card"
                     number="02"
-                    title="Meeting"
+                    title="Info meeting"
                     description="Schedule a meeting with our team to discuss your project in detail. This session allows us to understand your goals and address any questions you may have." />
                 <ProcessCard
                     className="process-card"
                     number="03"
-                    title="Meeting"
+                    title="Get proposal"
                     description="After the meeting, we develop a proposal tailored to your business needs, detailing the plan and the solutions we offer." />
                 <ProcessCard
                     className="process-card"

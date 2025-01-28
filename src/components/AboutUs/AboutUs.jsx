@@ -32,7 +32,7 @@ export const AboutUs = () => {
     );
 
     const sections = [
-        { title: "What services does your agency offer?", content: "We specialize in web development, digital marketing, and our unique Growth Partner plan. This plan combines both web development and marketing strategies to help your brand achieve its full potential online." },
+        { title: "What plans does your agency offer?", content: "We offer web development, digital marketing, and our unique Growth Partner plan. This plan combines both web development and marketing strategies to help your brand achieve its full potential online." },
         { title: "How long does it take to complete a project?", content: "The timeline depends on the scope of the project. On average, web development projects take 4-6 weeks, while marketing strategies are ongoing and adjusted monthly based on performance." },
         { title: "What is the Growth Partner plan?", content: "The Growth Partner plan integrates web development and digital marketing into a cohesive strategy tailored to your business. This service focuses on scaling your brand, improving online visibility, and driving measurable results." },
         { title: "Do you offer custom web design?", content: "Absolutely! We create fully customized websites tailored to your business goals, ensuring a unique and professional online presence that aligns with your brand identity." },
